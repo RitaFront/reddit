@@ -1,0 +1,37 @@
+@import '../../main.global.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .textarea {
+    min-height: 89px;
+    border-radius: 3px 3px 0px 0px;
+    border: 1px solid $greyD9;
+    resize: none;
+
+    &[aria-invalid] {
+      border-color: red;
+    }
+  }
+
+  .button {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    border-radius: 0px 0px 3px 0px;
+    background-color: $orange;
+    color: $white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

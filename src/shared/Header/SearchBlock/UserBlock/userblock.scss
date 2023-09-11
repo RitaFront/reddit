@@ -1,0 +1,50 @@
+@import '../../../../main.global.scss';
+
+.userBox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  &:hover span {
+    color: $orange;
+  }
+
+  &:hover .avatarBox {
+    box-shadow: 0 0 0 1px $orange;
+  }
+
+  .avatarBox {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 100%;
+    box-shadow: none;
+
+    @media all and (max-width: 1023px) {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+    }
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .avatarImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  .username {
+    display: none;
+
+    @media all and (min-width: 1024px) {
+      display: flex;
+    }
+  }
+}

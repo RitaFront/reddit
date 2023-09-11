@@ -1,0 +1,35 @@
+@import '../../../../../main.global.scss';
+
+.menuListContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+
+  @media all and (max-width: 1024px) {
+    top: 10px;
+    right: 0;
+    left: unset;
+    transform: unset;
+  }
+
+  .menuList {
+    padding: 17px 20px;
+    background-color: $white;
+
+    @media all and (max-width: 1024px) {
+      padding: 12px 20px;
+    }
+
+    .menuItemSvg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

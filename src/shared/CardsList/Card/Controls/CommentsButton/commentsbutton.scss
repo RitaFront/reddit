@@ -1,0 +1,18 @@
+@import '../../../../../main.global.scss';
+
+.commentsButton {
+  display: flex;
+  align-items: normal;
+  gap: 6px;
+
+  @media all and (min-width: 1024px) {
+    display: none;
+  }
+
+  .commentsNumber {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    color: $greyC4;
+  }
+}

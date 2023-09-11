@@ -1,0 +1,40 @@
+@import '../../../../../../main.global.scss';
+
+.menuItem {
+  &:not(:first-child) {
+    padding-top: 6px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  @media all and (max-width: 1024px) {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(4) {
+      display: none;
+    }
+
+    &:nth-child(3) {
+      padding-top: 0;
+    }
+  }
+
+  .menuItemBtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .menuItemTitle {
+    color: $grey99;
+    font-size: 14px;
+    line-height: normal;
+
+    @media all and (max-width: 1024px) {
+      font-size: 12px;
+    }
+  }
+}

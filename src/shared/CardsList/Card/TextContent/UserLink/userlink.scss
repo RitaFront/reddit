@@ -1,0 +1,32 @@
+@import '../../../../../main.global.scss';
+
+.userLink {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 7px;
+
+  @media all and (min-width: 1024px) {
+    gap: 5px;
+  }
+
+  &:hover a {
+    @media all and (min-width: 1540px) {
+      text-decoration: underline;
+    }
+  }
+
+  .avatar {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .username {
+    position: relative;
+    z-index: 1;
+    color: $orange;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

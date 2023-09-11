@@ -1,0 +1,26 @@
+@import '../../main.global.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .input {
+    min-height: 89px;
+    border-radius: 3px 3px 0px 0px;
+    border: 1px solid $greyD9;
+    resize: none;
+  }
+
+  .btn {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 50px;
+    border-radius: 0px 0px 3px 0px;
+    background-color: $orange;
+    color: $white;
+    font-weight: 600;
+  }
+}

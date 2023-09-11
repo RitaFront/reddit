@@ -1,0 +1,21 @@
+@import '../../../../../../main.global.scss';
+
+.menuClose {
+  display: none;
+
+  @media all and (max-width: 1440px) {
+    display: block;
+    color: $grey66;
+    font-size: 16px;
+    line-height: normal;
+    border-radius: 0px 0px 3px 3px;
+    border: 0px solid #000;
+    background: $greyD9;
+    height: 38px;
+  }
+
+  @media all and (max-width: 1024px) {
+    height: 36px;
+    font-size: 12px;
+  }
+}

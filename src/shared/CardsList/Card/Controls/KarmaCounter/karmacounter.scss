@@ -1,0 +1,41 @@
+@import '../../../../../main.global.scss';
+
+.karmaCounter {
+  display: flex;
+  gap: 4px;
+
+  @media all and (min-width: 1024px) {
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 7px;
+  }
+
+  & > button.up:hover > svg > path {
+    @media all and (min-width: 1540px) {
+      fill: $green;
+    }
+  }
+
+  & > button.down:hover > svg > path {
+    @media all and (min-width: 1540px) {
+      fill: $orange;
+    }
+  }
+
+  .karmaValue {
+    font-size: 12px;
+    line-height: 14px;
+    color: $greyC4;
+
+    @media all and (min-width: 1024px) {
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+    }
+  }
+
+  svg.down {
+    transform: rotate(180deg);
+  }
+}

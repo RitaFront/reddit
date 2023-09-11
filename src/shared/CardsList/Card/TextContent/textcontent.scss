@@ -1,0 +1,57 @@
+@import '../../../../main.global.scss';
+
+.textContent {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 7px;
+
+  @media all and (min-width: 1024px) {
+    flex-basis: 540px;
+    order: 1;
+    flex-flow: column-reverse nowrap;
+    justify-content: center;
+    margin-left: 38px;
+  }
+
+  @media all and (min-width: 1540px) {
+    flex-basis: 672px;
+  }
+
+  & > * {
+    @media all and (min-width: 1024px) {
+      flex: 0 0;
+    }
+  }
+
+  .metaData {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 7px;
+
+    @media all and (min-width: 1024px) {
+      flex-flow: row-reverse nowrap;
+      justify-content: flex-end;
+    }
+
+    .createdAt {
+      color: $grey99;
+      font-size: 10px;
+      line-height: 12px;
+
+      @media all and (min-width: 1024px) {
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .publishedLabel {
+        display: none;
+        color: $grey99;
+
+        @media all and (min-width: 1024px) {
+          display: inline;
+        }
+      }
+    }
+  }
+}

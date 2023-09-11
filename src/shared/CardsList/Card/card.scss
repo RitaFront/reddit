@@ -1,0 +1,44 @@
+@import '../../../main.global.scss';
+
+.card {
+  position: relative;
+  background-color: $white;
+  border-radius: 7px;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 22px 20px 10px;
+
+  & > * {
+    flex: 1 1 100%;
+
+    @media all and (min-width: 1024px) {
+      flex: 0 0;
+    }
+  }
+
+  &:hover h2 a,
+  &:focus-within h2 a {
+    color: $orange;
+  }
+
+  &:hover,
+  &:focus-within {
+    @media all and (min-width: 1540px) {
+      outline: 1px solid $greyD9;
+    }
+  }
+
+  @media all and (min-width: 1024px) {
+    background-color: transparent;
+    flex-flow: row nowrap;
+    max-height: 107px;
+    padding: 0 40px;
+  }
+
+  @media all and (min-width: 1540px) {
+    padding: 20px 45px 20px 72px;
+    border-radius: 0;
+    max-height: 147px;
+    cursor: pointer;
+  }
+}

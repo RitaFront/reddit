@@ -5,7 +5,7 @@ import { Layout } from './shared/Layout';
 import { Header } from './shared/Header';
 import { Content } from './shared/Content';
 import { CardsList } from './shared/CardsList';
-import { PostsContextProvider } from './shared/context/postsContext';
+// import { PostsContextProvider } from './shared/context/postsContext';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import { useActions } from './hooks/useActions';
@@ -15,14 +15,14 @@ function AppComponent() {
   saveToken();
 
   return (
-    <PostsContextProvider>
-      <Layout>
-        <Header />
-        <Content>
-          <CardsList />
-        </Content>
-      </Layout>
-    </PostsContextProvider>
+    // <PostsContextProvider>
+    <Layout>
+      <Header />
+      <Content>
+        <CardsList />
+      </Content>
+    </Layout>
+    // </PostsContextProvider>
   );
 }
 

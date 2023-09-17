@@ -1,4 +1,23 @@
+@import '../../main.global.scss';
+
 .cardList {
+  .loadMore {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid $orange;
+    padding: 15px;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $orange;
+      color: $white;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
   @media all and (min-width: 1024px) {
     padding: 40px 0;
   }

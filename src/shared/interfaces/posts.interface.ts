@@ -7,3 +7,9 @@ export interface IPosts {
   createdAt?: number;
   rating?: number;
 }
+
+export interface IPostsContext {
+  dataPosts: IPosts[];
+  loading: boolean;
+  errorLoading: string;
+}

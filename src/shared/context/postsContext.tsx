@@ -1,19 +1,25 @@
-import React, { createContext } from 'react';
-import { usePostsData } from '../../hooks/usePostsData';
-import { IPosts } from '../interfaces/posts.interface';
+// import React, { createContext } from 'react';
+// import { usePostsData } from '../../hooks/usePostsData';
+// import { IPostsContext } from '../interfaces/posts.interface';
 
-export const postsContext = createContext<IPosts[]>([]);
+// export const postsContext = createContext<IPostsContext>({
+//   dataPosts: [],
+//   loading: false,
+//   errorLoading: '',
+// });
 
-export function PostsContextProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const data = usePostsData();
+// export function PostsContextProvider({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   const { dataPosts, loading, errorLoading } = usePostsData();
 
-  return (
-    <postsContext.Provider value={data}>
-      {children}
-    </postsContext.Provider>
-  );
-}
+//   return (
+//     <postsContext.Provider
+//       value={{ dataPosts, loading, errorLoading }}
+//     >
+//       {children}
+//     </postsContext.Provider>
+//   );
+// }

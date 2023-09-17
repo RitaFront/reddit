@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { IComments } from '../shared/interfaces/postComments.interface';
-import { getTimePost } from './usePostsData';
 import { useTypedSelector } from './useTypedSelector';
+import { getTimePost } from '../utils/js';
 
 export const usePostComments = (postId: string) => {
   const { token } = useTypedSelector((state) => state.token);

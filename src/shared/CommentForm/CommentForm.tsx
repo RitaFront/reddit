@@ -1,15 +1,11 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './commentForm.scss';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Field, Form, Formik } from 'formik';
 
 interface ICommentFrom {
   value: string;
   onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
   onSubmit: (e: FormEvent) => void;
-}
-
-interface MyFormValues {
-  comment: string;
 }
 
 export const CommentForm = ({
@@ -40,13 +36,7 @@ export const CommentForm = ({
       initialValues={{ comment: value }}
       enableReinitialize={true}
       validate={(values) => {
-        // const errors = {
-        //   comment: '',
-        // };
-
         if (values.comment.length <= 3) {
-          // errors.comment = 'Введите больше 3-х символов';
-          // return errors;
           return { comment: 'Введите больше 3-х символов' };
         }
         return {};

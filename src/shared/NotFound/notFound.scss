@@ -1,0 +1,28 @@
+@import '../../main.global.scss';
+
+.notFound {
+  padding: 50px;
+  text-align: center;
+
+  &_title {
+    font-weight: 600;
+    color: $orange;
+  }
+
+  &_descr {
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  &_btn {
+    border: 2px solid $orange;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+
+    &:hover {
+      color: $white;
+      background-color: $orange;
+    }
+  }
+}

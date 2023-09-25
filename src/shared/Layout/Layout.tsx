@@ -1,10 +1,16 @@
 import React from 'react';
 import styles from './layout.scss';
+import { Header } from '../Header';
+import { Outlet } from 'react-router-dom';
+import { Content } from '../Content';
 
-interface ILayoutProps {
-  children?: React.ReactNode;
-}
-
-export function Layout({ children }: ILayoutProps) {
-  return <div className={styles.layout}>{children}</div>;
+export function Layout() {
+  return (
+    <div className={styles.layout}>
+      <Header />
+      <Content>
+        <Outlet />
+      </Content>
+    </div>
+  );
 }

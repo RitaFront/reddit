@@ -4,16 +4,15 @@ import styles from './post.scss';
 import { usePostComments } from '../../hooks/usePostComments';
 import { CommentsBlock } from './CommentsBlock';
 import { CommentFormContainer } from '../CommentFromContainer';
+import { useNavigate, useParams } from 'react-router-dom';
 
-interface IPostProps {
-  onClose?: () => void;
-  id: string;
-}
-
-export function Post(props: IPostProps) {
+export function Post() {
   const ref = useRef<HTMLDivElement>(null);
   const [isComments, setIsComments] = useState(false);
-  const comments: any = usePostComments(props.id);
+  const postId = useParams();
+
+  const navigate = useNavigate();
+  const comments: any = usePostComments(postId.id!);
   const modal = document.getElementById('modal_root');
 
   if (!modal) return null;
@@ -24,7 +23,7 @@ export function Post(props: IPostProps) {
         event.target instanceof Node &&
         !ref.current?.contains(event.target)
       ) {
-        props.onClose?.();
+        navigate('/');
       }
     }
     document.addEventListener('click', handleClick);

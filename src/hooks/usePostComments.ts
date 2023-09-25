@@ -3,10 +3,13 @@ import axios from 'axios';
 import { IComments } from '../shared/interfaces/postComments.interface';
 import { useTypedSelector } from './useTypedSelector';
 import { getTimePost } from '../utils/js';
+import { useNavigate } from 'react-router-dom';
 
 export const usePostComments = (postId: string) => {
   const { token } = useTypedSelector((state) => state.token);
   const [postComments, setPostComments] = useState<IComments[]>([]);
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (token.length > 10) {
       axios
@@ -41,7 +44,9 @@ export const usePostComments = (postId: string) => {
           setPostComments([...comments]);
         })
         .catch(console.log);
-    } else return;
+    } else {
+      navigate('/');
+    }
   }, [token]);
 
   return postComments;

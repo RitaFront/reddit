@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './title.scss';
-import { Post } from '../../../../Post/Post';
+import { Link } from 'react-router-dom';
 
 interface ITitle {
   title: string;
@@ -8,20 +8,15 @@ interface ITitle {
 }
 
 export function Title({ title, id }: ITitle) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <h2 className={styles.title}>
-      <a
-        href="#post-url"
-        className={styles.postLink}
-        onClick={() => setIsModalOpen(true)}
-      >
+      <Link to={'/posts/' + id} className={styles.postLink}>
         {title}
-      </a>
-      {isModalOpen && (
-        <Post id={id} onClose={() => setIsModalOpen(false)} />
-      )}
+      </Link>
     </h2>
   );
+}
+
+{
+  /* <Post id={id} onClose={() => setIsModalOpen(false)} /> */
 }

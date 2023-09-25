@@ -3,6 +3,7 @@ import styles from './cardslist.scss';
 import { Card } from './Card/Card';
 import { useActions } from '../../hooks/useActions';
 import { useTypedSelector } from '../../hooks/useTypedSelector';
+import { Outlet } from 'react-router-dom';
 
 export function CardsList() {
   const { data, loading, error, loadMoreCount } = useTypedSelector(
@@ -66,6 +67,7 @@ export function CardsList() {
           Загрузить еще
         </button>
       )}
+      <Outlet />
     </ul>
   );
 }
